@@ -8,10 +8,10 @@ local personal_options = {
   cmdheight = 1, -- number of lines to use for the command-line
   cursorline = true, -- highlight the screen line of the cursor
   cursorlineopt = { "line", "number" }, -- settings for 'cursorline'
-  showmode = true, -- message on status line to show current mode
+  showmode = false, -- message on status line to show current mode
   laststatus = 2,  -- The value of this option influences when the last window will have a status line
   statusline = " %f %m %= %l:%c   ", -- appearance of status line
-  colorcolumn = "120", -- line at 80 chrs
+  colorcolumn = "120", -- line at 120 chrs
 
   -- Ruler
   ruler = false, -- show cursor line and column in the status line
