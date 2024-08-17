@@ -14,6 +14,16 @@ local treesitter_opts = {
   highlight = { enable = true },
   indent = { enable = true },
 
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<leader>is",
+      node_incremental = "<leader>in",
+      scope_incremental = "<leader>ic",
+      node_decremental = "<leader>im",
+    },
+  },
+
   additional_vim_regex_highlighting = false,
 }
 
@@ -25,5 +35,3 @@ return {
     require("nvim-treesitter.configs").setup(treesitter_opts)
   end,
 }
-
-
