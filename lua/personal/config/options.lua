@@ -10,7 +10,7 @@ local personal_options = {
   cursorlineopt = { "line", "number" }, -- settings for 'cursorline'
   showmode = false, -- message on status line to show current mode
   laststatus = 2,  -- The value of this option influences when the last window will have a status line
-  statusline = " %f %m %= %l:%c   ", -- appearance of status line
+  statusline = " ", -- appearance of status line
   colorcolumn = "120", -- line at 120 chrs
 
   -- Ruler
