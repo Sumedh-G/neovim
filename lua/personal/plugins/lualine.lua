@@ -3,6 +3,14 @@
 local lualine_opts = {
   -- My personal options for lualine
   theme = 'tokyonight',
+  sections = {
+    lualine_a = {'buffers'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'searchcount', 'selectioncount'},
+    lualine_x = {'diagnostics'},
+    lualine_y = {'filetype', 'filesize'},
+    lualine_z = {'mode'}
+  },
 }
 
 return {
