@@ -37,17 +37,31 @@ vim.api.nvim_set_keymap(
 -- Oil
 -- Open as float
 vim.api.nvim_set_keymap(
-  "n", 
-  "<leader>oi", 
-  "<cmd>lua require('oil').open_float('.')<CR>", 
+  "n",
+  "<leader>oi",
+  "<cmd>lua require('oil').open_float('.')<CR>",
   { noremap = true, silent = true }
 )
 -- Open as Buffer
 vim.api.nvim_set_keymap(
-  "n", 
-  "<leader>oo", 
-  "<cmd>lua require('oil').open('.')<CR>", 
+  "n",
+  "<leader>oo",
+  "<cmd>lua require('oil').open('.')<CR>",
   { noremap = true, silent = true }
 )
 
-
+-- Opening Packages
+-- Lazy
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>lz",
+  "<cmd>Lazy<CR>",
+  { noremap = true, silent = true }
+)
+-- Mason
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>msn",
+  "<cmd>Mason<CR>",
+  { noremap = true, silent = true }
+)
