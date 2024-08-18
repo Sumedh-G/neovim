@@ -3,10 +3,6 @@ local mason_lspconfig_opts = {
   -- Options
 }
 
-local server_setup_opts = {
-  -- Server Setup Options
-}
-
 return {
   "williamboman/mason-lspconfig.nvim",
   dependencies = { "mason.nvim" },
@@ -15,7 +11,7 @@ return {
 
     require("mason-lspconfig").setup_handlers({
       function(server_name)
-        require("lspconfig")[server_name].setup(server_setup_opts)
+        require("lspconfig")[server_name].setup({})
       end,
     })
   end,
