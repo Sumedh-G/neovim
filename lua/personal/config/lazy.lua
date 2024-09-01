@@ -26,8 +26,6 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-require("personal.config.keymaps")
-
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -45,3 +43,6 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+require("personal.config.keymaps")
+require("personal.config.autocmds")

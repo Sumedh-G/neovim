@@ -3,6 +3,12 @@ local mason_lspconfig_opts = {
   -- Options
 }
 
+local lspconfig_handlers = {
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signatureHelp, { border = "rounded" }),
+}
+
+
 return {
   "williamboman/mason-lspconfig.nvim",
   dependencies = { "mason.nvim" },
@@ -11,7 +17,9 @@ return {
 
     require("mason-lspconfig").setup_handlers({
       function(server_name)
-        require("lspconfig")[server_name].setup({})
+        require("lspconfig")[server_name].setup({
+          handlers = lspconfig_handlers,
+        })
       end,
     })
   end,

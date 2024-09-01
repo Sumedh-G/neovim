@@ -39,7 +39,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
   "n",
   "<leader>oi",
-  "<cmd>lua require('oil').open_float('.')<CR>",
+  "<cmd>lua require('oil').open_float()<CR>",
   { noremap = true, silent = true }
 )
 -- Open as Buffer
