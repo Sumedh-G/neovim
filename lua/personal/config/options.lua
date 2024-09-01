@@ -39,7 +39,7 @@ local personal_options = {
   -- Line Numbers
   number = true, -- print the line number in front of each line
   numberwidth = 4, -- number of columns used for the line number
-  relativenumber = false, -- show relative line number in front of each line
+  relativenumber = true, -- show relative line number in front of each line
 
   -- Scrolling
   scroll = 16, -- lines to scroll with CTRL-U and CTRL-D
