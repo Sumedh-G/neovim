@@ -7,11 +7,7 @@ local lualine_opts = {
   sections = {
     lualine_a = {
       {
-        'buffers',
-        hide_filename_extension = true,
-        filetype_names = {
-          oil = 'Explorer',
-        },
+        'hostname',
         use_mode_colors = true,
       }
     },
@@ -22,7 +18,7 @@ local lualine_opts = {
       'diff',
     },
     lualine_x = {
-      'filetype', 
+      'filetype',
       'filesize',
     },
     lualine_y = {
@@ -30,6 +26,19 @@ local lualine_opts = {
     },
     lualine_z = {
       'mode',
+    }
+  },
+  tabline = {
+    lualine_a = {
+      {
+        'buffers',
+        filetype_names = {
+          oil = 'Explorer',
+        },
+        mode = 2,
+        hide_filename_extension = false,
+        icons_enabled = false,
+      }
     }
   },
 }

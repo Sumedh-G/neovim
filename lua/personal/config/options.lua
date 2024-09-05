@@ -12,6 +12,7 @@ local personal_options = {
   laststatus = 2,  -- The value of this option influences when the last window will have a status line
   statusline = " ", -- appearance of status line
   colorcolumn = "120", -- line at 120 chrs
+  updatetime = 200, -- lowers latency for updates
 
   -- Ruler
   ruler = false, -- show cursor line and column in the status line
@@ -38,7 +39,7 @@ local personal_options = {
 
   -- Line Numbers
   number = true, -- print the line number in front of each line
-  numberwidth = 4, -- number of columns used for the line number
+  numberwidth = 2, -- number of columns used for the line number
   relativenumber = true, -- show relative line number in front of each line
 
   -- Scrolling

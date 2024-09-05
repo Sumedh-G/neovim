@@ -4,6 +4,13 @@ local telescope_opts = {
   defaults = {
     preview = { hide_on_startup = false },
   },
+  pickers = {
+    live_grep = {
+      additional_args = function (opts)
+        return {"--hidden"}
+      end
+    },
+  },
 }
 
 local telescope_keymaps = {

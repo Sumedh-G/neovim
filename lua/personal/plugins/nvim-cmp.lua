@@ -3,6 +3,8 @@ return {
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-path',
   },
   event = { "InsertEnter" },
   config = function()
@@ -24,7 +26,7 @@ return {
 
       sources = cmp.config.sources({
         { name = 'nvim_lsp', max_item_count=5 },
-        { name = 'buffer' }
+        { name = 'buffer', max_item_count=5 }
       }),
 
     })

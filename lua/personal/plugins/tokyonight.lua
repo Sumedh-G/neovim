@@ -13,14 +13,18 @@ local tokyonight_opts = {
     keywords = { italic = true },
     functions = {},
     variables = {},
-    sidebars = "dark",
-    floats = "dark",
+    sidebars = "transparent",
+    floats = "transparent",
   },
   dim_inactive = false,
   lualine_bold = false,
+  telescope = true,
+  lualine = true,
+  --[[
   on_colors = function(colors)
     colors.bg = colors.bg_dark
   end,
+  ]]--
 }
 
 --[[
