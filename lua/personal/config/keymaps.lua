@@ -1,8 +1,7 @@
 
 --[[ My Keymaps ]]--
 
--- Ease of use keymaps
--- in Nvim
+-- Ease of use keymaps in nvim
 
 -- Saving
 vim.api.nvim_set_keymap(
@@ -15,6 +14,20 @@ vim.api.nvim_set_keymap(
   "n",
   "<c-S>",
   "<cmd>wa<CR>",
+  { noremap = true }
+)
+
+-- Saving in insert
+vim.api.nvim_set_keymap(
+  "i",
+  "<c-s>",
+  "<esc><cmd>w<CR>",
+  { noremap = true }
+)
+vim.api.nvim_set_keymap(
+  "i",
+  "<c-S>",
+  "<esc><cmd>wa<CR>",
   { noremap = true }
 )
 

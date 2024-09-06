@@ -3,6 +3,7 @@ local barbecue_opts = {
   -- My opts for barbecue nvim
   theme = 'tokyonight',
   create_autocmd = false,
+  exclude_filetypes = { "oil", "toggleterm" },
 }
 
 return {
