@@ -15,10 +15,10 @@ local telescope_opts = {
 
 local telescope_keymaps = {
   -- My Keymaps for telescope
-  { '<leader>f', "<cmd>Telescope find_files<cr>", {} },
-  { '<leader>gf', "<cmd>Telescope live_grep<cr>", {} },
-  { '<leader>bf', "<cmd>Telescope buffers<cr>", {} },
-  { '<leader>hf', "<cmd>Telescope help_tags<cr>", {} },
+  { '<leader>ff', "<cmd>Telescope find_files<cr>", {} },
+  { '<leader>fg', "<cmd>Telescope live_grep<cr>", {} },
+  { '<leader>fb', "<cmd>Telescope buffers<cr>", {} },
+  { '<leader>fh', "<cmd>Telescope help_tags<cr>", {} },
 }
 
 return {

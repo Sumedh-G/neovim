@@ -1,10 +1,10 @@
 
 local treesitter_opts = {
   -- Personal settings for treesitter
-  ensure_installed = { 
-    "c", 
-    "lua", 
-    "vim", 
+  ensure_installed = {
+    "c",
+    "lua",
+    "vim",
     "vimdoc",
     "markdown",
     "markdown_inline"
@@ -15,7 +15,7 @@ local treesitter_opts = {
   indent = { enable = true },
 
   incremental_selection = {
-    enable = true,
+  enable = true,
     keymaps = {
       init_selection = "<leader>is",
       node_incremental = "<leader>in",

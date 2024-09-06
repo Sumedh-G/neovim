@@ -1,8 +1,40 @@
-
 --[[ My Keymaps ]]--
 
 -- Ease of use keymaps in nvim
+local wk = require('which-key')
+wk.add({
+  { mode = { "n" } },
+  -- Telescope
+  { "<leader>f", group = "Telescope" },
+  { "<leader>ff", desc = "Find Files" },
+  { "<leader>fg", desc = "File Grep" },
+  { "<leader>fb", desc = "Find Buffer" },
+  { "<leader>fh", desc = "Find Help" },
+  -- Treesitter
+  { "<leader>i", group = "Treesitter" },
+  { "<leader>is", desc = "Init Selection" },
+  { "<leader>in", desc = "Increment Node" },
+  { "<leader>ic", desc = "Increment Scope" },
+  { "<leader>im", desc = "Decrement Node" },
+  -- Oil Explorer
+  { "<leader>o", group = "Explorer" },
+  { "<leader>oo", desc = "New Tab" },
+  { "<leader>oi", desc = "Floating Window" },
+  -- Terminal
+  { "<leader>t", group = "Terminal" },
+  { "<leader>th", desc = "Horizontal" },
+  { "<leader>tv", desc = "Vertical" },
+  { "<leader>tf", desc = "Float" },
+  { "<leader>t<Tab>", desc = "Tab" },
+  { "<leader>tg", desc = "Lazygit" },
+  { "<leader>ts", desc = "Htop" },
+  -- Plugin Menus
+  { "<leader>p", group = "Plugin Menus" },
+  { "<leader>pl", desc = "Lazy" },
+  { "<leader>pm", desc = "Mason" },
+})
 
+--[[ Non-linear keymaps ]]--
 -- Saving
 vim.api.nvim_set_keymap(
   "n",
@@ -31,8 +63,6 @@ vim.api.nvim_set_keymap(
   { noremap = true }
 )
 
-
-
 -- Buffer control
 vim.api.nvim_set_keymap(
   "n",
@@ -46,6 +76,8 @@ vim.api.nvim_set_keymap(
   "<cmd>bp<CR>",
   { noremap = true }
 )
+
+--[[ Custom keymaps for plugins ]]--
 
 -- Oil
 -- Open as float
@@ -67,14 +99,14 @@ vim.api.nvim_set_keymap(
 -- Lazy
 vim.api.nvim_set_keymap(
   "n",
-  "<leader>lz",
+  "<leader>pl",
   "<cmd>Lazy<CR>",
   { noremap = true, silent = true }
 )
 -- Mason
 vim.api.nvim_set_keymap(
   "n",
-  "<leader>msn",
+  "<leader>pm",
   "<cmd>Mason<CR>",
   { noremap = true, silent = true }
 )
@@ -92,7 +124,7 @@ end
 
 vim.api.nvim_set_keymap(
   "n",
-  "<leader>gg",
+  "<leader>tg",
   "<cmd>lua _Lazygit_toggle()<CR>",
   { noremap = true, silent = true }
 )
@@ -106,7 +138,7 @@ end
 
 vim.api.nvim_set_keymap(
   "n",
-  "<leader>ht",
+  "<leader>ts",
   "<cmd>lua _Htop_toggle()<CR>",
   { noremap = true, silent = true }
 )
@@ -120,11 +152,10 @@ end
 
 vim.api.nvim_set_keymap(
   "n",
-  "f<c-t>",
+  "<leader>tf",
   "<cmd>lua _Fterm_toggle()<CR>",
   { noremap = true, silent = true }
 )
-
 
 local vterm = Terminal:new({ display_name = "Terminal", direction = "vertical" })
 
@@ -134,8 +165,33 @@ end
 
 vim.api.nvim_set_keymap(
   "n",
-  "v<c-t>",
+  "<leader>tv",
   "<cmd>lua _Vterm_toggle()<CR>",
   { noremap = true, silent = true }
 )
 
+local hterm = Terminal:new({ display_name = "Terminal", direction = "horizontal" })
+
+function _Hterm_toggle()
+  hterm:toggle()
+end
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>th",
+  "<cmd>lua _Hterm_toggle()<CR>",
+  { noremap = true, silent = true }
+)
+
+local tabterm = Terminal:new({ display_name = "Terminal", direction = "tab" })
+
+function _Tabterm_toggle()
+  tabterm:toggle()
+end
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>t<Tab>",
+  "<cmd>lua _Tabterm_toggle()<CR>",
+  { noremap = true, silent = true }
+)
