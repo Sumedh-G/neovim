@@ -84,31 +84,58 @@ vim.api.nvim_set_keymap(
 local Terminal  = require('toggleterm.terminal').Terminal
 
 -- Lazygit
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
 
-function _lazygit_toggle()
+function _Lazygit_toggle()
   lazygit:toggle()
 end
 
 vim.api.nvim_set_keymap(
   "n",
   "<leader>gg",
-  "<cmd>lua _lazygit_toggle()<CR>",
+  "<cmd>lua _Lazygit_toggle()<CR>",
   { noremap = true, silent = true }
 )
 
 -- Htop
-local htop = Terminal:new({ cmd = "htop", hidden = true })
+local htop = Terminal:new({ cmd = "htop", hidden = true, direction = "float" })
 
-function _htop_toggle()
+function _Htop_toggle()
   htop:toggle()
 end
 
 vim.api.nvim_set_keymap(
   "n",
   "<leader>ht",
-  "<cmd>lua _htop_toggle()<CR>",
+  "<cmd>lua _Htop_toggle()<CR>",
   { noremap = true, silent = true }
 )
 
+-- Attached terminal windows
+local fterm = Terminal:new({ display_name = "Terminal", direction = "float" })
+
+function _Fterm_toggle()
+  fterm:toggle()
+end
+
+vim.api.nvim_set_keymap(
+  "n",
+  "f<c-t>",
+  "<cmd>lua _Fterm_toggle()<CR>",
+  { noremap = true, silent = true }
+)
+
+
+local vterm = Terminal:new({ display_name = "Terminal", direction = "vertical" })
+
+function _Vterm_toggle()
+  vterm:toggle()
+end
+
+vim.api.nvim_set_keymap(
+  "n",
+  "v<c-t>",
+  "<cmd>lua _Vterm_toggle()<CR>",
+  { noremap = true, silent = true }
+)
 

@@ -4,7 +4,7 @@ local toggleterm_opts = {
   open_mapping = [[<c-t>]],
   insert_mappings = true,
   terminal_mappings = true,
-  direction = 'float'
+  direction = 'horizontal'
 }
 
 return {
