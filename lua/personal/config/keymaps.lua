@@ -78,3 +78,37 @@ vim.api.nvim_set_keymap(
   "<cmd>Mason<CR>",
   { noremap = true, silent = true }
 )
+
+
+-- Terminal madness
+local Terminal  = require('toggleterm.terminal').Terminal
+
+-- Lazygit
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+
+function _lazygit_toggle()
+  lazygit:toggle()
+end
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>gg",
+  "<cmd>lua _lazygit_toggle()<CR>",
+  { noremap = true, silent = true }
+)
+
+-- Htop
+local htop = Terminal:new({ cmd = "htop", hidden = true })
+
+function _htop_toggle()
+  htop:toggle()
+end
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ht",
+  "<cmd>lua _htop_toggle()<CR>",
+  { noremap = true, silent = true }
+)
+
+
