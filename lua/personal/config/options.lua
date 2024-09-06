@@ -9,8 +9,8 @@ local personal_options = {
   cursorline = true, -- highlight the screen line of the cursor
   cursorlineopt = { "line", "number" }, -- settings for 'cursorline'
   showmode = false, -- message on status line to show current mode
-  laststatus = 2,  -- The value of this option influences when the last window will have a status line
-  statusline = " ", -- appearance of status line
+  laststatus = 3,  -- The value of this option influences when the last window will have a status line
+  statusline = "", -- appearance of status line
   colorcolumn = "120", -- line at 120 chrs
   updatetime = 200, -- lowers latency for updates
 
@@ -39,7 +39,7 @@ local personal_options = {
 
   -- Line Numbers
   number = true, -- print the line number in front of each line
-  numberwidth = 2, -- number of columns used for the line number
+  numberwidth = 4, -- number of columns used for the line number
   relativenumber = true, -- show relative line number in front of each line
 
   -- Scrolling

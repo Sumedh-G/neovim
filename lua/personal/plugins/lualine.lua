@@ -34,6 +34,7 @@ local lualine_opts = {
         'buffers',
         filetype_names = {
           oil = 'Explorer',
+          checkhealth = 'Health Check'
         },
         mode = 2,
         hide_filename_extension = false,
