@@ -6,7 +6,7 @@ Options
 local tokyonight_opts = {
   style = "night",
   light_style = "day",
-  transparent = false,
+  transparent = true,
   terminal_colors = true,
   styles = {
     comments = { italic = true },

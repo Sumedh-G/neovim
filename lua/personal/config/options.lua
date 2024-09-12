@@ -65,14 +65,26 @@ local personal_options = {
 
   -- Icons and Titles
   icon = true, -- let Vim set the text of the window icon
-  iconstring = "Nvim", -- string to use for the Vim icon text
+  iconstring = "Neovim", -- string to use for the Vim icon text
   title = true, -- let Vim set the title of the window
+  titlestring = "Neovim"
 
 }
 
 for k, v in pairs(personal_options) do
   vim.opt[k] = v
 end
+
+-- options for neovide
+if vim.g.neovide then
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+  vim.g.neovide_cursor_vfx_particle_density = 10.0
+  vim.g.neovide_floating_shadow = false
+  vim.o.guifont = "JetBrainsMono Nerd Font"
+end
+
+
+
 
 --[[
 -- clipboard
