@@ -14,3 +14,4 @@ vim.api.nvim_create_autocmd({
     require("barbecue.ui").update()
   end,
 })
+

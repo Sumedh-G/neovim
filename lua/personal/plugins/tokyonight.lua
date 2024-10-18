@@ -20,9 +20,6 @@ local tokyonight_opts = {
   lualine_bold = false,
   telescope = true,
   lualine = true,
-  on_colors = function(colors)
-    colors.bg = colors.bg_dark
-  end,
 }
 
 --[[

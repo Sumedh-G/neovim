@@ -44,6 +44,9 @@ wk.add({
   { "<leader>Co", group = "Open"},
   { "<leader>Coe", desc = "Open Example" },
   { "<leader>Cow", desc = "Open Website" },
+  -- Buffer Actions
+  { "<leader>b", group = "Buffer Actions"},
+  { "<leader>bw", desc = "Close Buffer"}
 })
 
 --[[ Non-linear keymaps ]]--
@@ -259,3 +262,12 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+
+-- Buffer actions
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>bw",
+  "<cmd>bw<CR>",
+  { noremap = true}
+)

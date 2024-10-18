@@ -5,7 +5,7 @@ Personal Options for nvim
 local personal_options = {
   -- GUI
   background = "dark", -- "dark" or "light", used for highlight colors
-  cmdheight = 1, -- number of lines to use for the command-line
+  cmdheight = 0, -- number of lines to use for the command-line
   cursorline = true, -- highlight the screen line of the cursor
   cursorlineopt = { "line", "number" }, -- settings for 'cursorline'
   showmode = false, -- message on status line to show current mode

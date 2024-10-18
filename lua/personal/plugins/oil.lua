@@ -24,6 +24,7 @@ local oil_opts = {
     conceallevel = 3,
     concealcursor = "nvic",
     number = false,
+    relativenumber = false
   },
   skip_confirm_for_simple_edits = true,
   constrain_cursor = "name",
